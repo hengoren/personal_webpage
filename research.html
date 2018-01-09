@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Harry Engoren - Research</title>
+    <link rel="shortcut icon" href="icons/he-logo-bold.ico" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-fixed-top navbar-default">
+  		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle navbar-toggle-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle nav</span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+				</button>
+	  			<!-- <a class="navbar-brand" href="index.html">HE</a> -->
+	  			<a href="#" class="navbar-left"><img style="max-height: 50px" src="icons/he-navbar-nodots.ico"></a>
+			</div>
+
+
+
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class ="nav navbar-nav navbar-right">
+		 			<li><a href="index.html"> Home </a></li>
+		 			<li class="active"><a href="#">Research</a></li>
+		  			<li><a href="projects.html">Projects</a></li>
+		  			<li><a href="resume.html">Resume</a></li>
+				</ul>
+  		</div>
+	</nav>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Oak Ridge National Laboratory</h1>
+			<h2>Nature Inspired Machine Learning Team - Summer 2017 </h2>
+			<p> During the summer of 2017, I had the pleasure of working as an undergraduate research assistant at the Oak Ridge National Lab in Oak Ridge, TN. Under the guidance of my mentor, Dr. Travis Johnston, I helped explore which neural networks and what parameters could best locate cloud regions in a satellite image. Specifically, I researched whether there was an optimal size to tile the satellite image before handing these tiles to the neural net. I discovered that the resulting classification accuracy for different input tile sizes was dependent on which net was used.  Further, I was able to generate several other hypotheses for the team to test in the future. Click one of the buttons below for more information. </p>
+			<br>
+			<p><a class="btn btn-primary btn-lg" href="attatchments/engorenh_final_abstract.pdf" role="button"> Abstract </a> <a class="btn btn-primary btn-lg" href="attatchments/poster_presentation.pdf" role="button"> Poster Presentation </a> <a class="btn btn-primary btn-lg" href="attatchments/optimizing-neural-networks-final.pdf" role="button"> Full Paper </a></p>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>University of South Carolina </h1>
+			<h2>Mathematics Department - Spring 2017 </h2>
+			<p> Throughout my sophomore spring semester at the University of South Carolina, I was able to form a research team with two fellow students, Austin Herrygers and Caleb Simmons, and our professor, Dr. Joshua Cooper. We set out to research some of the statistical properties of Sudoku. Although it may not be immediately recognizable, Sudoku has strong ties to one of modern mathematics' major fields of research, graph theory. If you consider each cell in a Sudoku puzzle to be a vertex and place an edge between vertices if they are in the same row, column, or block, then you have successfully represented a Sudoku board as a graph. We can then imagine Sudoku as a graph coloring problem: a <i>proper coloring</i> of this Sudoku graph is precisely a complete Sudoku board. Progress made in proving theorems for these seemingly simple Sudoku puzzles may offer insight into other areas of graph theory and beyond. While our research is incomplete, we produced an algorithm for determining if a solution to a puzzle is a unique and a method to find minimal puzzles for 4x4 and 9x9 Sudoku puzzles. Click the button below for a simple Sudoku demo based on the code base we used for our research. <button type="button" class="btn btn-default btn-sm" data-toggle="collapse" data-target="#details1"> <span class="glyphicon glyphicon-plus-sign"></span> Read more </button>
+			</p>
+
+
+			<p id="details1" class = "collapse"> To better explain our research, there are some terms that should be defined. A <b>Sudoku puzzle</b> is an incomplete <b>Sudoku board</b>, which is a 9x9 matrix of numbers 1-9 placed so that no number appears twice in any row, column, or one of the nine 3x3 blocks; the numbers in the puzzle are referred to as clues, or <b>givens</b>. A <b>determining set</b>, also known as a fair puzzle, is a Sudoku puzzle with exactly one unique solution. Of these determining sets, <b>critical sets</b> are the determining sets where none of the current givens in the puzzle can be removed without making the puzzle unfair. Critical sets can be derived from determining sets simply by repeatedly removing givens that do not change the fairness of the puzzle until no such givens remain. Because of this, there is a set of critical subsets for every determining set, where the critical sets have varying <b>cardinalities</b>, or numbers of givens. We attempted to find the different possible cardinalities of the critical sets. Included in this question are four simpler, but still very interesting special cases. These cases involve finding the minimin, the maximin, the minimax, and the maximax: Over all determining sets, what is the largest/smallest cardinality of the smallest/largest critical set?</p>
+			<br>
+			<p><a class="btn btn-primary btn-lg" href="https://github.com/hengoren/sudoku-solver" role="button"> GitHub Repository </a> <a class="btn btn-primary btn-lg" href="attatchments/discover_usc.pdf" role="button"> Poster Presentation </a> 
+				<!-- <a class="btn btn-primary btn-lg" href="./sudokuapp/demo.html" role="button"> Sudoku Demo</a> -->
+				<a class="btn btn-primary btn-lg" href="sudoku-demo.html" role="button"> Sudoku Demo</a>
+		</div>
+	</div>
+
+	<!--/Footer-->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> </div>
+				<div class="col-sm-1"> <a href="https://www.github.com/hengoren/"> <i class="fa fa-github" style="font-size: 30px"> </i> </a> </div>
+				<div class="col-sm-1"> <a href="https://www.linkedin.com/in/harrison-engoren-680478111/"> <i class="fa fa-linkedin-square" style="font-size: 30px"> </i> </a> </div>
+				<div class="col-sm-1"> <a href="mailto:harrison.engoren@gmail.com.com?Subject=Your%20Website" target="_top"> <i class="glyphicon glyphicon-envelope" style="font-size: 30px"> </i></a> </div>
+			</div>
+		</div>
+	</footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

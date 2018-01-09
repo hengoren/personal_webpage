@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Harry Engoren</title>
+    <!-- Shortcut Icon --> 
+    <link rel="shortcut icon" href="icons/he-logo-bold.ico" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+  <style type="text/css">
+    
+      html, body {
+        background-color: #FAFAFA
+      }
+      table {
+        border: 2px solid black;
+      }
+      td {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;  
+      }
+      input {
+        color: black;
+        padding: 0;
+        border: 0;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        font-size: 15px;
+        background-color: white;
+        outline: none;
+      }
+      input:disabled {
+        background-color: lightgrey;
+      }
+      #cell0, #cell9, #cell18, #cell27, #cell36, #cell45, #cell54, #cell63, #cell72, #cell81, #cell3, #cell12, #cell21, #cell30, #cell39, #cell48, #cell57, #cell66, #cell75, #cell6, #cell15, #cell24, #cell33, #cell42, #cell51, #cell60, #cell69, #cell78 {border-left: 2px solid black;}
+      #cell0, #cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell27, #cell28, #cell29, #cell30, #cell31, #cell32, #cell33, #cell34, #cell35, #cell54, #cell55, #cell56, #cell57, #cell58, #cell59, #cell60, #cell61, #cell62 {border-top: 2px solid black;}
+      #cell8, #cell17, #cell26, #cell35, #cell44, #cell53, #cell62, #cell71, #cell80, #cell2, #cell11, #cell20, #cell29, #cell38, #cell47, #cell56, #cell65, #cell74, #cell5, #cell14, #cell23, #cell32, #cell41, #cell50, #cell59, #cell68, #cell77 {border-right: 2px solid black;}
+      #cell72, #cell73, #cell74, #cell75, #cell76, #cell77, #cell78, #cell79, #cell80, #cell18, #cell19, #cell20, #cell21, #cell22, #cell23, #cell24, #cell25, #cell26, #cell45, #cell46, #cell47, #cell48, #cell49, #cell50, #cell51, #cell52, #cell53{border-bottom: 2px solid black;}
+      
+      h2 { font-family: Georgia, Times, serif; font-size:24px; color:black; border-bottom: 1px solid black; text-align: center; }
+      /* Rules list */
+      #ruleslist { width:320px; }
+      ol { font-style:italic; font-family:Georgia, Times, serif; font-size:24px; color: black;  }
+      ol li { }
+      ol li p { padding:8px; font-style:normal; font-family: Georgia, Times, serif; font-size:18px; color: black; }
+      #ruleslist ol li p em { display:block; }
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="RandomClues()">
+	<nav class="navbar navbar-fixed-top navbar-default">
+  		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle navbar-toggle-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle nav</span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+				</button>
+	  			<!-- <a class="navbar-brand" href="index.html">HE</a> -->
+	  			<a href="#" class="navbar-left"><img style="max-height: 50px" src="icons/he-navbar-nodots.ico"></a>
+			</div>
+
+
+
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class ="nav navbar-nav navbar-right">
+		 			<li><a href="index.html"> Home </a></li>
+		 			<li class="active"><a href="research.html">Research</a></li>
+		  			<li><a href="projects.html">Projects</a></li>
+		  			<li><a href="resume.html">Resume</a></li>
+				</ul>
+  		</div>
+	</nav>
+  
+<div style="padding-top: 100px" class="container">
+    <div class="row">
+      <div class="col-sm-4"> 
+        <table id="sboard">
+          <tr>
+            <td id="cell0"><input id="cell0" type="text" ></td>
+            <td id="cell1"><input id="cell1" type="text" ></td>
+            <td id="cell2"><input id="cell2" type="text" ></td>
+            <td id="cell3"><input id="cell3" type="text" ></td>
+            <td id="cell4"><input id="cell4" type="text" ></td>
+            <td id="cell5"><input id="cell5" type="text" ></td>
+            <td id="cell6"><input id="cell6" type="text" ></td>
+            <td id="cell7"><input id="cell7" type="text" ></td>
+            <td id="cell8"><input id="cell8" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell9"><input id="cell9" type="text" ></td>
+            <td id="cell10"><input id="cell10" type="text" ></td>
+            <td id="cell11"><input id="cell11" type="text" ></td>
+            <td id="cell12"><input id="cell12" type="text" ></td>
+            <td id="cell13"><input id="cell13" type="text" ></td>
+            <td id="cell14"><input id="cell14" type="text" ></td>
+            <td id="cell15"><input id="cell15" type="text" ></td>
+            <td id="cell16"><input id="cell16" type="text" ></td>
+            <td id="cell17"><input id="cell17" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell18"><input id="cell18" type="text" ></td>
+            <td id="cell19"><input id="cell19" type="text" ></td>
+            <td id="cell20"><input id="cell20" type="text" ></td>
+            <td id="cell21"><input id="cell21" type="text" ></td>
+            <td id="cell22"><input id="cell22" type="text" ></td>
+            <td id="cell23"><input id="cell23" type="text" ></td>
+            <td id="cell24"><input id="cell24" type="text" ></td>
+            <td id="cell25"><input id="cell25" type="text" ></td>
+            <td id="cell26"><input id="cell26" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell27"><input id="cell27" type="text" ></td>
+            <td id="cell28"><input id="cell28" type="text" ></td>
+            <td id="cell29"><input id="cell29" type="text" ></td>
+            <td id="cell30"><input id="cell30" type="text" ></td>
+            <td id="cell31"><input id="cell31" type="text" ></td>
+            <td id="cell32"><input id="cell32" type="text" ></td>
+            <td id="cell33"><input id="cell33" type="text" ></td>
+            <td id="cell34"><input id="cell34" type="text" ></td>
+            <td id="cell35"><input id="cell35" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell36"><input id="cell36" type="text" ></td>
+            <td id="cell37"><input id="cell37" type="text" ></td>
+            <td id="cell38"><input id="cell38" type="text" ></td>
+            <td id="cell39"><input id="cell39" type="text" ></td>
+            <td id="cell40"><input id="cell40" type="text" ></td>
+            <td id="cell41"><input id="cell41" type="text" ></td>
+            <td id="cell42"><input id="cell42" type="text" ></td>
+            <td id="cell43"><input id="cell43" type="text" ></td>
+            <td id="cell44"><input id="cell44" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell45"><input id="cell45" type="text" ></td>
+            <td id="cell46"><input id="cell46" type="text" ></td>
+            <td id="cell47"><input id="cell47" type="text" ></td>
+            <td id="cell48"><input id="cell48" type="text" ></td>
+            <td id="cell49"><input id="cell49" type="text" ></td>
+            <td id="cell50"><input id="cell50" type="text" ></td>
+            <td id="cell51"><input id="cell51" type="text" ></td>
+            <td id="cell52"><input id="cell52" type="text" ></td>
+            <td id="cell53"><input id="cell53" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell54"><input id="cell54" type="text" ></td>
+            <td id="cell55"><input id="cell55" type="text" ></td>
+            <td id="cell56"><input id="cell56" type="text" ></td>
+            <td id="cell57"><input id="cell57" type="text" ></td>
+            <td id="cell58"><input id="cell58" type="text" ></td>
+            <td id="cell59"><input id="cell59" type="text" ></td>
+            <td id="cell60"><input id="cell60" type="text" ></td>
+            <td id="cell61"><input id="cell61" type="text" ></td>
+            <td id="cell62"><input id="cell62" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell63"><input id="cell63" type="text" ></td>
+            <td id="cell64"><input id="cell64" type="text" ></td>
+            <td id="cell65"><input id="cell65" type="text" ></td>
+            <td id="cell66"><input id="cell66" type="text" ></td>
+            <td id="cell67"><input id="cell67" type="text" ></td>
+            <td id="cell68"><input id="cell68" type="text" ></td>
+            <td id="cell69"><input id="cell69" type="text" ></td>
+            <td id="cell70"><input id="cell70" type="text" ></td>
+            <td id="cell71"><input id="cell71" type="text" ></td>
+          </tr>
+          <tr>
+            <td id="cell72"><input id="cell72" type="text" ></td>
+            <td id="cell73"><input id="cell73" type="text" ></td>
+            <td id="cell74"><input id="cell74" type="text" ></td>
+            <td id="cell75"><input id="cell75" type="text" ></td>
+            <td id="cell76"><input id="cell76" type="text" ></td>
+            <td id="cell77"><input id="cell77" type="text" ></td>
+            <td id="cell78"><input id="cell78" type="text" ></td>
+            <td id="cell79"><input id="cell79" type="text" ></td>
+            <td id="cell80"><input id="cell80" type="text" ></td>
+          </tr>
+        </table>
+        <br>
+        <p>
+          <button type="button" onclick = "AttemptSolve()"> Submit </button>
+          <button type="button" onclick = "RandomClues()"> Generate Clues </button>
+          <button type="button" onclick = "ClearBoard()"> Clear </button>
+        </p>
+      </div>
+      <div class="col-sm-4">  </div>
+      <div class="col-sm-4"> 
+        <h2> Sudoku Rules!! </h2>
+        <ol id="ruleslist">
+          <li> <p>Every row, column, and each of the larger 3x3 blocks must contain all the numbers 1-9 </p> </li>
+          <li> <p> No row, column, or block may contain repitions or omissions </p> </li>
+          <li> <p> There is only one unique solution </p> </li>
+        </ol>
+        <p style = "font-family:Georgia, Times, serif; font-size:24px;" id="correct"> </p>
+      </div>
+  </div>
+</div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./sudokuapp/src/model/SAT.js"></script>
+    <script src="./sudokuapp/src/model/puzzle.js"></script>
+    <script> RandomClues() </script>
+  </body>
+</html>
